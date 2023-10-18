@@ -2,7 +2,7 @@ import Icon from '@expo/vector-icons/FontAwesome5';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
 import Carousel, { Pagination } from 'react-native-x-carousel';
-
+import React from 'react';
 
 export default function App() {
   const data = [{
@@ -33,22 +33,25 @@ export default function App() {
   }]
   const width = Dimensions.get('window').width;
   return (
-    <View style={styles.container}>
-      <Carousel data={data} pagination={Pagination} renderItem={(item, key) => {
-        return (
-          <View key={key} style={{ width: width }}>
-            <Image style={styles.image} source={item.gambar} />
-            <View style={styles.containerDescription}>
-              <Text style={styles.title}>{item.nama}</Text>
-              <Text style={styles.institutionName}>
-                <Icon name='map-marker-alt' />  {item.institusi}
-              </Text>
-              <Text style={styles.description}>{item.deskripsi}</Text>
+    <React.Fragment>
+      <View style={styles.container}>
+        <Carousel data={data} pagination={Pagination} renderItem={(item, key) => {
+          return (
+            <View key={key} style={{ width: width }}>
+              <Image style={styles.image} source={item.gambar} />
+              <View style={styles.containerDescription}>
+                <Text style={styles.title}>{item.nama}</Text>
+                <Text style={styles.institutionName}>
+                  <Icon name='map-marker-alt' />  {item.institusi}
+                </Text>
+                <Text style={styles.description}>{item.deskripsi}</Text>
+              </View>
             </View>
-          </View>
-        )
-      }} />
-    </View >
+          )
+        }} />
+      </View >
+      <StatusBar style='auto' />
+    </React.Fragment>
   );
 }
 
