@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {
-      width: 1, height: 1
+      width: 1,
+      height: 1
     },
     textShadowRadius: 5
   },
@@ -87,7 +88,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {
-      width: 1, height: 1
+      width: 1,
+      height: 1
     },
     textShadowRadius: 5
   },
@@ -97,7 +99,8 @@ const styles = StyleSheet.create({
     fontSize: 12.5,
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {
-      width: 1, height: 1
+      width: 1,
+      height: 1
     },
     textShadowRadius: 8
   }
