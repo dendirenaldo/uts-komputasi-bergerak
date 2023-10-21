@@ -92,11 +92,11 @@ const Home = ({ route, navigation }) => {
     );
     return (
         <ScrollView style={styles.scroll}>
-            <View style={[styles.container, { height: (width * 4) / 3, backgroundColor: 'white' }]}>
+            <View style={[styles.container, { height: (width * 3) / 2, backgroundColor: 'white' }]}>
                 <Carousel data={dataFiltered} pagination={Pagination} renderItem={(item, key) => {
                     return (
-                        <View key={key} style={{ flex: 1, width: width, height: (width * 4) / 3 }}>
-                            <Image style={[styles.image, { width: (width * 4) / 3 }]} source={item.gambar} />
+                        <View key={key} style={{ flex: 1, width: width, height: (width * 3) / 2 }}>
+                            <Image style={[styles.image, { width: (width * 3) / 2 }]} source={item.gambar} />
                             <View style={styles.containerDescription}>
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View style={{ width: width * 0.76 }}>
